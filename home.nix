@@ -6,6 +6,10 @@
         username = "cauaarch";
         homeDirectory = "/home/cauaarch";
         stateVersion = "26.05";
+        packages =
+        [
+            inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+        ];
     };
 
     imports = 

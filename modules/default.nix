@@ -3,6 +3,6 @@
 {
     imports = 
     [
-        ./obs-studio.nix
+        ./onlyoffice.nix
     ];
 }
