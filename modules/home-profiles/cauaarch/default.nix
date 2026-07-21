@@ -6,13 +6,12 @@
       pkgs = self.legacyPackages.x86_64-linux;
       extraSpecialArgs = { inherit inputs self; };
 
-      modules =
-        [
-          {
-            imports = builtins.attrValues (self.homeModules or { });
-          }
+      modules = [
+        inputs.nix-flatpak.homeManagerModules.nix-flatpak
 
-          ./_home.nix
-        ];
+        { imports = builtins.attrValues (self.homeModules or { }); }
+
+        ./_home.nix
+      ];
     };
 }

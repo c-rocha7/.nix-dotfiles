@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  programs.obsidian = {
+  programs.spotify-player = {
     enable = true;
   };
 }
